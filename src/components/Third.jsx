@@ -54,10 +54,10 @@ const Third = () => {
           </p>
 
           <p>
-            Over the years we've been called lots of things - builders,
+            Over the years we&apos;ve been called lots of things - builders,
             innovators, <span className="italic underline">समाधान</span> , but
             our favorite has got to be
-            <span className="italic text-white"> "go-to-team"</span>
+            <span className="italic text-white"> &quot;go-to-team&quot;</span>
           </p>
         </div>
       </div>
@@ -73,7 +73,7 @@ const Third = () => {
           </h2>
           <p className="max-w-xl flex flex-col justify-end">
             We take great pride in everything that we achieve on behalf of our
-            clients. Our work is our passion. See what we've created for our
+            clients. Our work is our passion. See what we&apos;ve created for our
             happy clients.
           </p>
         </div>

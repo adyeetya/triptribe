@@ -208,7 +208,7 @@ const Awards = () => {
         className={`lg:w-1/2 text-left tracking-tighter text-3xl sm:text-4xl md:text-6xl mb-4 mx-4 font-bold ${lora.className}`}
       >
         Hey There,<span className="italic"> Check Out </span>
-        Something you don't know About Our{' '}
+        Something you don&apos;t know About Our{' '}
         <span className="italic">Brand </span>!
       </h1>
       <div className="flex flex-col xl:flex-row ">

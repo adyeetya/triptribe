@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-
+import Script from 'next/script'
 const Second = () => {
   return (
     <div className="min-h-screen max-w-screen-2xl mx-auto flex flex-col p-4 md:p-8 py-8 md:py-12">
@@ -19,10 +19,10 @@ const Second = () => {
         {/* vids */}
         <div className="flex flex-row items-start">
           <div className="w-20 md:w-32 h-20 md:h-32">
-            <script
+            <Script
               src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
               type="module"
-            ></script>
+            ></Script>
 
             <dotlottie-player
               src="https://lottie.host/e0e14799-7a40-466b-aa32-202df8c479d0/Hae5JPwY5c.json"
@@ -34,10 +34,10 @@ const Second = () => {
             ></dotlottie-player>
           </div>
           <div className="w-20 md:w-32 h-20 md:h-32">
-            <script
+            <Script
               src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
               type="module"
-            ></script>
+            ></Script>
 
             <dotlottie-player
               src="https://lottie.host/6c039547-eeec-411e-aa60-c6dc4ac6c6de/JOESjgxmIA.json"
