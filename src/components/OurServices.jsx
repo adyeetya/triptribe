@@ -50,8 +50,8 @@ const OurServices = () => {
       <div>
         <p className="max-w-80">
           Are you a small or medium-sized business looking to establish or
-          enhance your online presence? Look no further! We're here to help you
-          achieve your goals with our comprehensive digital solutions.
+          enhance your online presence? Look no further! We&apos;re here to help
+          you achieve your goals with our comprehensive digital solutions.
         </p>
       </div>
 
