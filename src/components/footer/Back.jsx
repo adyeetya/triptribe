@@ -40,22 +40,22 @@ const Back = () => {
           <p className="text-sm text-gray-600">FOLLOW US</p>
           <div className="flex justify-between gap-4 items-center max-w-60 md:max-w-80">
             <Link
-              href="https://www.instagram.com/triptribe"
+              href="https://www.instagram.com/official_triptribe"
               className="text-3xl"
             >
               <FaInstagram className="w-12 h-12" />
             </Link>
-            <Link href="https://www.behance.net/triptribe" className="text-3xl">
+            <Link href="#" className="text-3xl">
               <FaBehanceSquare className="w-12 h-12" />
             </Link>
             <Link
-              href="https://www.facebook.com/triptribe"
+              href="#"
               className="text-3xl"
             >
               <FaFacebookSquare className="w-12 h-12" />
             </Link>
             <Link
-              href="https://www.facebook.com/triptribe"
+              href="#"
               className="text-3xl"
             >
               <FaSquareXTwitter className="w-12 h-12" />
