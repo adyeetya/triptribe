@@ -23,11 +23,13 @@ export default function RootLayout({ children }) {
           inter.className
         )}
       >
-        <Navbar />
-        <ScrollProgressCircle />
-        <div className="relative z-10">{children}</div>
-        <Footer />
-        <Back />
+        <div id="__next">
+          <Navbar />
+          <ScrollProgressCircle />
+          <div className="relative z-10">{children}</div>
+          <Footer />
+          <Back />
+        </div>
       </body>
     </html>
   )
