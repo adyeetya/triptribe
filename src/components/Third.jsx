@@ -87,18 +87,18 @@ const Third = () => {
         <div className="lg:w-1/2 w-full">
           {projects.map((project) => (
             <div key={project.id} className="space-y-6 mb-16">
-              <Link href={project.link}>
-                <div className="overflow-hidden lg:h-96 w-full">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    layout="responsive"
-                    objectFit="cover"
-                    width={1000}
-                    height={1000}
-                    className="md:transform md:transition-transform md:duration-300 md:ease-in-out md:hover:scale-105"
-                  />
-                </div>
+             <Link href={project.link}>
+              <div className="overflow-hidden lg:h-96 w-full">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  layout="responsive"
+                  objectFit="cover"
+                  width={1000}
+                  height={1000}
+                  className="md:transform md:transition-transform md:duration-300 md:ease-in-out md:hover:scale-105"
+                />
+              </div>
               </Link>
               <div className="flex flex-col md:flex-row justify-between gap-4">
                 <Link href={project.link}>

@@ -5,15 +5,8 @@ import Links from './Links'
 import Link from 'next/link'
 import Image from 'next/image'
 import ToggleButton from './ToggleButton'
-import { Lora } from 'next/font/google'
 
-const lora = Lora({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-})
-
-const MidNavbar = () => {
+const MidNavbar = ({ openModal }) => {
   const [open, setOpen] = useState(false)
 
   return (
@@ -52,12 +45,12 @@ const MidNavbar = () => {
               Get Quotes
               <span className="absolute bottom-0 left-0 w-full h-[2px] rounded-full bg-[#ff5200] origin-left transform scale-x-0 transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
             </Link>
-            <Link
-              href="#"
+            <button
+              onClick={openModal}
               className="whitespace-nowrap font-semibold text-sm 2xl:text-base rounded-full px-4 py-2 bg-[#ff5200] hover:text-[#ff5200] border border-black hover:border-[#ff5200] hover:bg-black transition duration-300 ease-in-out"
             >
               Hire Us
-            </Link>
+            </button>
           </div>
         </div>
         <div className="m-2  flex justify-center items-center">

@@ -17,7 +17,7 @@ const CustomModal = ({ isOpen, onClose }) => {
       onClick={onClose}
     >
       <div
-        className="bg-black text-gray-200 p-4 rounded-lg shadow-lg relative w-full max-w-md h-60 flex flex-col items-start justify-between"
+        className="bg-black text-gray-200 p-4 rounded-lg shadow-lg relative w-full mx-2 md:mx-0 max-w-md h-60 flex flex-col items-start justify-between"
         onClick={(e) => e.stopPropagation()}
       >
         <button

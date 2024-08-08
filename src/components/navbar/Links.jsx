@@ -36,8 +36,7 @@ const itemVariants = {
     // },
   },
 }
-const Links = () => {
- 
+const Links = ({ openModal, setOpen }) => {
   const links = [
     {
       name: 'Our Works',
@@ -47,9 +46,11 @@ const Links = () => {
     { name: 'Get Quotes', slug: '#', text: 'Get estimates.' },
     { name: 'Collaborate', slug: '#', text: 'Work with us.' },
     { name: 'Our Story', slug: '#', text: 'Know the brand.' },
-   
   ]
-
+  const handleClick = () => {
+    openModal()
+    setOpen(false)
+  }
   return (
     <div className="w-[100vw] min-h-[100vh] z-50 flex flex-col bg-black text-gray-200 gap-16 px-4 pt-4 pb-40">
       {links.map((item) => (
@@ -69,9 +70,12 @@ const Links = () => {
       {/* get in touch */}
       <div className="inline-block relative py-2">
         <div className="flex">
-          <motion.a href="/contact-us" className="text-4xl flex-1">
-            Get In Touch
-          </motion.a>
+          <button
+            onClick={handleClick}
+            className="text-4xl text-left flex-1 text-[#ff5200]"
+          >
+            Hire Us
+          </button>
           <div className="flex justify-center items-center px-4">
             <svg
               width="47"

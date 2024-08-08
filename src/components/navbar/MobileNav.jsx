@@ -5,15 +5,9 @@ import Links from './Links'
 import Link from 'next/link'
 import Image from 'next/image'
 import ToggleButton from './ToggleButton'
-import { Lora } from 'next/font/google'
 
-const lora = Lora({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-})
 
-const MobileNav = () => {
+const MobileNav = ({ openModal }) => {
   const [open, setOpen] = useState(false)
 
   return (
@@ -50,7 +44,7 @@ const MobileNav = () => {
             exit={{ y: -700 }}
             transition={{ duration: 0.5 }}
           >
-            <Links />
+            <Links openModal={openModal} setOpen={setOpen} />
           </motion.div>
         )}
       </AnimatePresence>

@@ -1,17 +1,19 @@
 'use client'
-import React, { useEffect, useRef } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import MobileNav from './MobileNav'
 import MidNavbar from './MidNavbar'
+import HireModal from '../HireModal'
 
-import { Lora } from 'next/font/google'
-const lora = Lora({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-})
 const Navbar = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false)
+  const closeModal = () => {
+    setModalIsOpen(false)
+  }
+  const openModal = () => {
+    setModalIsOpen(true)
+  }
   return (
     <nav className="sticky h-16 inset-x-0 top-0 z-30 w-full transition-all bg-black mx-auto md:px-12">
       <div className="hidden lg:flex h-16 items-center justify-between xl:px-0 max-w-screen-2xl mx-auto">
@@ -69,22 +71,26 @@ const Navbar = () => {
             Insights
             <span className="absolute bottom-0 left-0 w-full h-[2px] rounded-full bg-[#ff5200] origin-left transform scale-x-0 transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
           </Link>
-          <Link
-            href="#"
+          <button
+            onClick={openModal}
             className="whitespace-nowrap font-semibold text-sm 2xl:text-base rounded-full px-4 py-2 bg-[#ff5200] hover:text-[#ff5200] border border-black hover:border-[#ff5200] hover:bg-black transition duration-300 ease-in-out"
           >
             Hire Us
-          </Link>
+          </button>
         </div>
       </div>
       {/* mid navbar */}
       <div className="">
-        <MidNavbar />
+        <MidNavbar openModal={openModal} />
       </div>
 
       {/* mobile nav */}
       <div className="">
-        <MobileNav />
+        <MobileNav openModal={openModal} />
+      </div>
+
+      <div>
+        <HireModal isOpen={modalIsOpen} onClose={closeModal} />
       </div>
     </nav>
   )

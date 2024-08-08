@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils'
 import './globals.css'
 import Back from '@/components/footer/Back'
 import ScrollProgressCircle from '@/components/ScrollProgress'
-
+import { Toaster } from 'react-hot-toast'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -23,13 +23,12 @@ export default function RootLayout({ children }) {
           inter.className
         )}
       >
-        <div id="__next">
-          <Navbar />
-          <ScrollProgressCircle />
-          <div className="relative z-10">{children}</div>
-          <Footer />
-          <Back />
-        </div>
+        <Navbar />
+        <ScrollProgressCircle />
+        <div className="relative z-10">{children}</div>
+        <Footer />
+        <Back />
+        <Toaster />
       </body>
     </html>
   )
