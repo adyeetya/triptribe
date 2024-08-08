@@ -1,30 +1,36 @@
 import React from 'react'
 import Strips from './Strips'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const projects = [
   {
     id: '1',
-    image: '/images/projects/dashboard-mockup.webp',
-    title: 'Dashboard',
-    type: ['UIxUX', 'Website'],
+    image: '/images/projects/icon-mockup.webp',
+    title: 'Yesnmore',
+    link: '/yesnmore',
+    type: ['UIxUX', 'Branding', 'Website', 'Product'],
   },
   {
     id: '2',
-    image: '/images/projects/icon-mockup.webp',
-    title: 'Yesnmore',
-    type: ['UIxUX', 'Branding', 'Website', 'Product'],
+    image: '/images/projects/dashboard-mockup.webp',
+    title: 'Dashboard',
+    link: '#',
+    type: ['UIxUX', 'Website'],
   },
+
   {
     id: '3',
     image: '/images/projects/site-mockup.webp',
     title: 'Modular Manufacturer',
+    link: '#',
     type: ['UIxUX', 'Website', 'Branding'],
   },
   {
     id: '4',
     image: '/images/projects/product-mockup.webp',
     title: 'Products',
+    link: '#',
     type: ['Product Designs', 'Branding'],
   },
 ]
@@ -73,32 +79,39 @@ const Third = () => {
           </h2>
           <p className="max-w-xl flex flex-col justify-end">
             We take great pride in everything that we achieve on behalf of our
-            clients. Our work is our passion. See what we&apos;ve created for our
-            happy clients.
+            clients. Our work is our passion. See what we&apos;ve created for
+            our happy clients.
           </p>
         </div>
         {/* projects */}
         <div className="lg:w-1/2 w-full">
           {projects.map((project) => (
             <div key={project.id} className="space-y-6 mb-16">
-              <div className="overflow-hidden lg:h-96 w-full">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  layout="responsive"
-                  objectFit="cover"
-                  width={1000}
-                  height={1000}
-                  className="transform transition-transform duration-300 ease-in-out hover:scale-105"
-                />
-              </div>
+              <Link href={project.link}>
+                <div className="overflow-hidden lg:h-96 w-full">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    layout="responsive"
+                    objectFit="cover"
+                    width={1000}
+                    height={1000}
+                    className="md:transform md:transition-transform md:duration-300 md:ease-in-out md:hover:scale-105"
+                  />
+                </div>
+              </Link>
               <div className="flex flex-col md:flex-row justify-between gap-4">
-                <p className="bg-black w-fit h-fit text-gray-200 px-4 py-2">
-                  {project.title}
-                </p>
+                <Link href={project.link}>
+                  <p className="bg-black w-fit h-fit text-gray-200 px-4 py-2">
+                    {project.title}
+                  </p>
+                </Link>
                 <div className="flex gap-4 flex-wrap">
                   {project.type.map((type) => (
-                    <p key={type} className="bg-gray-100 text-black px-4 py-2 text-xs md:text-sm">
+                    <p
+                      key={type}
+                      className="bg-gray-100 text-black px-4 py-2 text-xs md:text-sm"
+                    >
                       {type}
                     </p>
                   ))}
