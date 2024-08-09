@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import toast from 'react-hot-toast'
+
 const HireModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
     name: '',
@@ -8,6 +8,7 @@ const HireModal = ({ isOpen, onClose }) => {
     number: '',
     services: [],
   })
+  const [loading, setLoading] = useState(false) // New state for loading
 
   const servicesList = [
     'Websites',
@@ -35,12 +36,31 @@ const HireModal = ({ isOpen, onClose }) => {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(formData)
-    toast.success('We will contact you soon!')
-    onClose()
-    // Add logic to email the formData here
+    setLoading(true) // Set loading to true when form is submitted
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        toast.success('Message sent, We will contact you soon!')
+        onClose()
+      } else {
+        toast.error('Failed to send your request. Please try again.')
+      }
+    } catch (error) {
+      console.error('Error:', error)
+      toast.error('An error occurred. Please try again later.')
+    } finally {
+      setLoading(false) // Set loading to false after the request is completed
+    }
   }
 
   useEffect(() => {
@@ -59,7 +79,7 @@ const HireModal = ({ isOpen, onClose }) => {
       onClick={onClose}
     >
       <div
-        className="bg-white text-black rounded-lg shadow-lg relative w-full mx-2 md:mx-0 max-h-[calc(100vh-5rem)] flex flex-col md:flex-row items-stretch"
+        className="bg-white max-w-screen-2xl text-black rounded-lg shadow-lg relative w-full mx-2 md:mx-0 max-h-[calc(100vh-5rem)] flex flex-col md:flex-row items-stretch"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -142,8 +162,10 @@ const HireModal = ({ isOpen, onClose }) => {
               <button
                 type="submit"
                 className="bg-[#ff5200] text-white px-4 py-2"
+                disabled={loading} // Disable button while loading
               >
-                Send
+                {loading ? 'Sending...' : 'Send'}{' '}
+                {/* Show "Sending..." while loading */}
               </button>
             </div>
           </form>
