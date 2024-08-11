@@ -37,12 +37,15 @@ const Back = () => {
           <p className="text-sm text-gray-600">REACH US</p>
           <a
             href="mailto:hellotriptribe@gmail.com"
-            className="text-xl font-semibold"
+            className="text-xl font-semibold hover:underline"
           >
             hellotriptribe@gmail.com
           </a>
 
-          <a href="tel:+917489190166" className="text-xl font-semibold">
+          <a
+            href="tel:+917489190166"
+            className="text-xl font-semibold hover:underline"
+          >
             +91-7489190166
           </a>
         </div>
@@ -54,16 +57,16 @@ const Back = () => {
               href="https://www.instagram.com/official_triptribe"
               className="text-3xl"
             >
-              <FaInstagram className="w-12 h-12" />
+              <FaInstagram className="w-12 h-12 text-gray-600 hover:text-black" />
             </Link>
             <Link href="#" className="text-3xl">
-              <FaBehanceSquare className="w-12 h-12" />
+              <FaBehanceSquare className="w-12 h-12 text-gray-600 hover:text-black" />
             </Link>
             <Link href="#" className="text-3xl">
-              <FaFacebookSquare className="w-12 h-12" />
+              <FaFacebookSquare className="w-12 h-12 text-gray-600 hover:text-black" />
             </Link>
             <Link href="#" className="text-3xl">
-              <FaSquareXTwitter className="w-12 h-12" />
+              <FaSquareXTwitter className="w-12 h-12 text-gray-600 hover:text-black" />
             </Link>
           </div>
         </div>

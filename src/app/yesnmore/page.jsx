@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import { GoArrowUpRight } from 'react-icons/go'
 
 const page = () => {
   return (
@@ -53,8 +54,8 @@ const page = () => {
         </div>
         {/* the challenge */}
         <div className="flex flex-col gap-8">
-          <div className="flex gap-8">
-            <div className="w-1/2">
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className=" md:w-1/2 ">
               <Image
                 src="/images/yesnmore/img2.webp"
                 alt="mockup"
@@ -62,7 +63,7 @@ const page = () => {
                 height={1000}
               />
             </div>
-            <div className="w-1/2 flex flex-col gap-16 justify-center">
+            <div className="md:w-1/2 flex flex-col gap-8 md:gap-16 justify-center">
               <h2 className="text-xl font-semibold whitespace-nowrap">
                 / THE CHALLENGE
               </h2>
@@ -106,8 +107,8 @@ const page = () => {
         </div>
         {/* the approach */}
         <div className="flex flex-col gap-8">
-          <div className="flex gap-8">
-            <div className="w-1/2">
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="md:w-1/2">
               <Image
                 src="/images/yesnmore/single-bottle.webp"
                 alt="mockup"
@@ -116,7 +117,7 @@ const page = () => {
                 className="w-full h-auto max-h-screen rounded-3xl"
               />
             </div>
-            <div className="w-1/2 flex flex-col gap-16 justify-center">
+            <div className="md:w-1/2 flex flex-col gap-8 md:gap-16 justify-center">
               <h2 className="text-xl font-semibold whitespace-nowrap">
                 / THE APPROACH
               </h2>
@@ -147,17 +148,18 @@ const page = () => {
         </div>
         {/* the solution */}
         <div className="flex flex-col gap-8">
-          <div className="flex gap-8">
-            <div className="w-1/2">
-              <Image
-                src="/images/yesnmore/saucha1.webp"
-                alt="mockup"
-                width={1000}
-                height={1000}
-                className="w-full h-auto rounded-3xl object-cover"
-              />
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="md:w-1/2">
+              <video
+                loop
+                autoPlay
+                muted
+                playsInline
+                src="/images/yesnmore/vid1.mp4"
+                className="w-full h-auto object-cover max-h-screen rounded-3xl"
+              ></video>
             </div>
-            <div className="w-1/2 flex flex-col gap-16 justify-center">
+            <div className="md:w-1/2 flex flex-col gap-8 md:gap-16 justify-center">
               <h2 className="text-xl font-semibold whitespace-nowrap">
                 / THE SOLUTION
               </h2>
@@ -201,6 +203,15 @@ const page = () => {
             height={1000}
             className="w-full h-auto max-h-screen rounded-3xl"
           />
+        </div>
+        {/* link */}
+        <div className="-mt-8 md:-mt-16">
+          <a
+            href="https://www.yesnmore.com/"
+            className="text-xl flex justify-center items-center w-fit text-[#ff5200] hover:underline decoration-[0.5px] underline-offset-2 font-thin"
+          >
+            Yesnmore <GoArrowUpRight className="mt-1" />
+          </a>
         </div>
       </div>
     </div>
