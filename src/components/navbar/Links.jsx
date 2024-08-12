@@ -40,7 +40,7 @@ const Links = ({ openModal, setOpen }) => {
   const links = [
     {
       name: 'Our Works',
-      slug: '#',
+      slug: '/#our-works',
       text: 'What we do.',
     },
     { name: 'Get Quotes', slug: '#', text: 'Get estimates.' },

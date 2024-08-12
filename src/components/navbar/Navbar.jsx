@@ -21,7 +21,7 @@ const Navbar = () => {
 
         <div className="w-[37.5%] h-16 items-center flex justify-between space-x-6 text-gray-200">
           <Link
-            href="#"
+            href="/#our-works"
             className="whitespace-nowrap font-semibold text-sm 2xl:text-base inline-block relative transition duration-300 ease-in-out group px-2 py-1"
           >
             Our Works
@@ -35,13 +35,13 @@ const Navbar = () => {
             Get Quotes
             <span className="absolute bottom-0 left-0 w-full h-[2px] rounded-full bg-[#ff5200] origin-left transform scale-x-0 transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
           </Link>
-          <Link
-            href="#"
+          <button
+            onClick={openModal}
             className="whitespace-nowrap font-semibold text-sm 2xl:text-base inline-block relative transition duration-300 ease-in-out group px-2 py-1"
           >
             Collaborate
             <span className="absolute bottom-0 left-0 w-full h-[2px] rounded-full bg-[#ff5200] origin-left transform scale-x-0 transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
-          </Link>
+          </button>
         </div>
         <div className="w-1/4 h-16 flex justify-center items-center">
           <Link href="/">

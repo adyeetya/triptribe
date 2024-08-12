@@ -71,7 +71,10 @@ const Third = () => {
         <Strips />
       </div>
 
-      <div className="max-w-screen-2xl mx-auto flex  flex-col lg:flex-row items-start gap-8 px-4 md:p-8 md:mt-32">
+      <div
+        id="our-works"
+        className="max-w-screen-2xl mx-auto flex  flex-col lg:flex-row items-start gap-8 px-4 md:p-8 md:mt-32"
+      >
         {/* side text */}
         <div className="lg:w-1/2 lg:sticky top-0 md:top-24 flex flex-col justify-center w-full gap-4 md:gap-8">
           <h2 className="text-[50px] md:text-[100px] xl:text-[90px] 2xl:[120px] font-thin leading-none text-black">
@@ -87,18 +90,18 @@ const Third = () => {
         <div className="lg:w-1/2 w-full">
           {projects.map((project) => (
             <div key={project.id} className="space-y-6 mb-16">
-             <Link href={project.link}>
-              <div className="overflow-hidden lg:h-96 w-full">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  layout="responsive"
-                  objectFit="cover"
-                  width={1000}
-                  height={1000}
-                  className="md:transform md:transition-transform md:duration-300 md:ease-in-out md:hover:scale-105"
-                />
-              </div>
+              <Link href={project.link}>
+                <div className="overflow-hidden lg:h-96 w-full">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    layout="responsive"
+                    objectFit="cover"
+                    width={1000}
+                    height={1000}
+                    className="md:transform md:transition-transform md:duration-300 md:ease-in-out md:hover:scale-105"
+                  />
+                </div>
               </Link>
               <div className="flex flex-col md:flex-row justify-between gap-4">
                 <Link href={project.link}>
