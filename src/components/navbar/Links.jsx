@@ -43,9 +43,9 @@ const Links = ({ openModal, setOpen }) => {
       slug: '/#our-works',
       text: 'What we do.',
     },
-    { name: 'Get Quotes', slug: '#', text: 'Get estimates.' },
-    { name: 'Collaborate', slug: '#', text: 'Work with us.' },
-    { name: 'Our Story', slug: '#', text: 'Know the brand.' },
+    // { name: 'Get Quotes', slug: '#', text: 'Get estimates.' },
+    // { name: 'Collaborate', slug: '#', text: 'Work with us.' },
+    // { name: 'Our Story', slug: '#', text: 'Know the brand.' },
   ]
   const handleClick = () => {
     openModal()

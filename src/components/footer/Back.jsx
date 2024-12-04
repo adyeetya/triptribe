@@ -59,7 +59,7 @@ const Back = () => {
             >
               <FaInstagram className="w-12 h-12 text-gray-600 hover:text-black" />
             </Link>
-            <Link href="#" className="text-3xl">
+            {/* <Link href="#" className="text-3xl">
               <FaBehanceSquare className="w-12 h-12 text-gray-600 hover:text-black" />
             </Link>
             <Link href="#" className="text-3xl">
@@ -67,7 +67,7 @@ const Back = () => {
             </Link>
             <Link href="#" className="text-3xl">
               <FaSquareXTwitter className="w-12 h-12 text-gray-600 hover:text-black" />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

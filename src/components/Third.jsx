@@ -13,9 +13,9 @@ const projects = [
   },
   {
     id: '2',
-    image: '/images/projects/dashboard-mockup.webp',
-    title: 'Dashboard',
-    link: '#',
+    image: '/images/projects/travelchapes_card.webp',
+    title: 'Travel Chapes',
+    link: 'https://www.travelchapes.com/',
     type: ['UIxUX', 'Website'],
   },
 
@@ -23,15 +23,15 @@ const projects = [
     id: '3',
     image: '/images/projects/site-mockup.webp',
     title: 'Modular Manufacturer',
-    link: '#',
+    link: 'https://modularkitchenmanufacturer.com/',
     type: ['UIxUX', 'Website', 'Branding'],
   },
   {
     id: '4',
-    image: '/images/projects/product-mockup.webp',
-    title: 'Products',
-    link: '#',
-    type: ['Product Designs', 'Branding'],
+    image: '/images/projects/flux-edu.webp',
+    title: 'Flux Educare',
+    link: 'https://www.fluxeducare.in/',
+    type: ['Website', 'Branding'],
   },
 ]
 const Third = () => {

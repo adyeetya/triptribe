@@ -67,3 +67,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Change the background color and text color of selected text */
+::selection {
+  background-color: #ff5200; /* Yellow background */
+  color: #000000; /* Black text */
+}
+
+/* For Firefox compatibility */
+::-moz-selection {
+  background-color: #ff5200;
+  color: #000000;
+}
