@@ -16,7 +16,7 @@ const Back = () => {
   //   setModalIsOpen(true)
   // }
   return (
-    <div className="z-0 p-4 md:px-40 max-h-[500px] bg-white lg:max-h-[300px] rounded-t-3xl fixed bottom-0 w-full flex flex-col md:flex-row gap-4 justify-between overflow-hidden">
+    <div className="z-0 p-4 md:px-40 max-h-[500px] bg-white lg:max-h-[300px] rounded-t-3xl fixed bottom-0 max-w-[100vw] w-full flex flex-col md:flex-row gap-4 justify-between overflow-hidden">
       {/* for logo and hireus */}
       <div className="flex flex-col justify-center items-center gap-4">
         {' '}

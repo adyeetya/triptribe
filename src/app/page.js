@@ -25,7 +25,9 @@ export default function Home() {
   }
 
   return (
-    <main className={`${poppins.className} bg-white`}>
+    <main
+      className={`${poppins.className} bg-white overflow-x-hidden max-w-[100wv]`}
+    >
       <Hero />
       <Second />
       <OurServices />
